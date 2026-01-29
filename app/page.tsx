@@ -1,16 +1,17 @@
-interface ItemProps {
-  name: string;
-  quantity: number;
-  category: string;
-}
+import Link from "next/link";
 
-export default function Item({ name, quantity, category }: ItemProps) {
+export default function Page() {
   return (
-    <li className="m-2 p-4 bg-slate-900 border border-slate-700 rounded-lg max-w-sm">
-      <p className="text-lg font-bold text-white">{name}</p>
-      <p className="text-sm text-slate-300">
-        Buy {quantity} in {category}
+    <main>
+      <h1>CPRG 306 Assignments</h1>
+
+      <p>
+        <Link href="/week-2">Week 2</Link>
       </p>
-    </li>
+
+      <p>
+        <Link href="/week-3">Week 3</Link>
+      </p>
+    </main>
   );
 }
